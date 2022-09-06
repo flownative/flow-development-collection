@@ -27,9 +27,9 @@ copyright = '2006 and onwards by the authors'
 author = 'Neos Team and Contributors'
 
 # The short X.Y version.
-version = '8.1'
+version = 'dev-master'
 # The full version, including alpha/beta/rc tags.
-release = '8.1.x'
+release = 'dev-master'
 
 # -- General configuration ---------------------------------------------------
 
