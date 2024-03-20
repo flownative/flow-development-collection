@@ -54,6 +54,9 @@ class SessionKeyValueStore
     {
         $entryIdentifier = $this->createEntryIdentifier($storageIdentifier, $key);
         $serializedResult = $this->cache->get($entryIdentifier);
+        if ($serializedResult === false) {
+            return null;
+        }
         $this->writeDebounceHashes[$storageIdentifier->value][$key] = md5($serializedResult);
         return ($this->useIgBinary === true) ? igbinary_unserialize($serializedResult) : unserialize($serializedResult);
     }
